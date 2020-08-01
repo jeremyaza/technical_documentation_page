@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Raleway&display=swap");
+
+/*-----  Configuration -----*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-nav: #eff1f1;
+    --hover-bg: #d3d3d3;
+    --text-color: rgb(14, 14, 14);
+    --bg-code: #222831;
+    --comments: #aba7ac;
+    --line-numbers: rgb(212, 212, 212);
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+header {
+    font-family: "Questrial", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*-----  Menu -----*/
+#navbar {
+    position: fixed;
+    width: 230px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--bg-nav);
+}
+
+.title-navbar {
+    padding: 1em 0;
+    font-size: 1.2em;
+    padding: 1em 0.9em;
+    background: #fce38a;
+}
+
+.menu {
+    height: 88%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style: none;
+    > li {
+        position: relative;
+        border-bottom: 1px solid rgb(214, 213, 213);
+    }
+}
+
+.nav-link {
+    display: block;
+    padding: 1.2em 1em;
+    cursor: pointer;
+    color: var(--text-color);
+    &:hover {
+        background: var(--hover-bg);
+    }
+}
+
+/*-----  Content of the documentation -----*/
+#main-doc {
+    margin-left: 230px;
+}
+
+.main-section {
+    padding: 1em 3em;
+}
+
+.title-section {
+    font-size: 1.8em;
+    padding: 0.8em 0;
+}
+
+.info {
+    line-height: 30px;
+    padding: 0 1em;
+    p {
+        padding: 0.7em 0;
+    }
+    ul {
+        padding: 1em 2em 1em 4em;
+        li {
+            padding: 0.6em 0;
+        }
+    }
+
+    ol {
+        padding: 0.3em 0 0.3em 2em;
+        li {
+            padding: 0.3em 0;
+        }
+    }
+}
+
+.code-js {
+    margin: 0.9em auto;
+    width: 80%;
+    height: 280px;
+    background: var(--bg-code);
+    counter-reset: line;
+    overflow-y: hidden;
+    overflow-x: auto;
+    > .js {
+        position: relative;
+        color: white;
+        .comment {
+            position: relative;
+            color: var(--comments);
+        }
+        
+        .operator{
+            color: rgb(175, 110, 110);
+        }
+        .line-numbers-rows {
+            position: absolute;
+            top: -8px;
+            left: -90px;
+            width: 30px;
+            letter-spacing: 1px;
+            user-select: none;
+            pointer-events: none;
+            font-size: 100%;
+            > span::before {
+                counter-increment: line;
+                content: counter(line);
+                border-right: 1px solid var(--line-numbers);
+                padding: 1em 0.5em;
+                color: var(--line-numbers);
+            }
+        }
+    }
+}
+
+.code-2{
+    height: 150px;
+    width: 80%;
+}
+
+.code-3{
+    height: 200px;
+    width: 70%;
+}
+
+.code-4{
+    height: 90px;
+    width: 50%;
+}
+
+.keyword{
+    color: rgb(134, 113, 228);
+}
+.name{
+    color: rgb(240, 240, 167);
+}
+
+.property{
+    color: rgb(195, 221, 143);
+}
+
+.piece-code{
+    background: rgb(235, 235, 235);
+    font-size: 1.1em;
+}
+
+/*-----  Responsive -----*/
+@media only screen and (max-width: 630px) {
+    /*Menu*/
+    #navbar {
+        position: relative;
+        width: 100%;
+    }
+
+    .menu {
+        max-height: 230px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    /*Content*/
+    #main-doc {
+        margin-left: 0;
+    }
+    .main-section {
+        padding: 1em 1.5em;
+    }
+    .info {
+        ul {
+            padding: 1em 0 1em 2em;
+        }
+        ol {
+            padding: 0.5em 0 0.5em 0.8em;
+        }
+    }
+
+    .code-js {
+        height: 270px;
+        width: 100%;
+    }
+
+    .code-2{
+        height: 150px;
+        width: 100%;
+    }
+
+    .code-3{
+        height: 210px;
+        width: 100%;
+    }
+    .code-4{
+        height: 90px;
+        width: 100%;
+    }
+}

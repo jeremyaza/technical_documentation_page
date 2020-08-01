@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="content-main">
+      <nav id="navbar">
+        <header class="title-navbar">
+          JS Documentation
+        </header>
+        <ul class="menu">
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li><a class="nav-link" href="#Where_To">Where To</a></li>
+          <li><a class="nav-link" href="#Declarations">Declarations</a></li>
+          <li><a class="nav-link" href="#Comments">Comments</a></li>
+          <li><a class="nav-link" href="#Variables">Variables</a></li>
+          <li><a class="nav-link" href="#Data_Types">Data Types</a></li>
+          <li><a class="nav-link" href="#Functions">Functions</a></li>
+          <li><a class="nav-link" href="#Strings">Strings</a></li>
+          <li><a class="nav-link" href="#Objects">Objects</a></li>
+          <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+          <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+      </nav>
+
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header class="title-section">Introduction</header>
+          <article class="info">
+            <p>
+              JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g., having complex animations, clickable buttons, popup menus,
+              etc.). Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over
+              them.
+            </p>
+            <p>
+              JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and
+              statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:
+            </p>
+            <ul>
+              <li>
+                Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM).
+              </li>
+              <li>
+                Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server.
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Where_To">
+          <header class="title-section">Where To</header>
+          <article class="info">
+            <p>
+              You can place any number of scripts in an HTML document. Scripts can be placed in the <strong>body</strong>, or in the <strong> head </strong>section of an HTML page,
+              or in both.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="Declarations">
+          <header class="title-section">Declarations</header>
+          <article class="info">
+            <p>JavaScript has three kinds of variable declarations.</p>
+            <ul>
+              <li><code class="piece-code">var</code> JavaScript has three kinds of variable declarations.</li>
+              <li><code class="piece-code">let</code> Declares a block-scoped, local variable, optionally initializing it to a value.</li>
+              <li><code class="piece-code">const</code> Declares a block-scoped, read-only named constant.</li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Comments">
+          <header class="title-section">Comments</header>
+          <article class="info">
+            <p>The syntax of comments is the same as in C++ and in many other languages:</p>
+            <pre class="code-js">
+    <code class="js"> 
+        <span class="comment">// a one line comment</span>
+
+        <span class="comment">/* this is a longer, 
+        * multi-line comment
+        */</span>
+
+        <span class="comment">/* You can't, however, /* nest comments */</span> SyntaxError <span class="operator">*</span><span class="operator">/</span>  
+    <span class="line-numbers-rows">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+    </code>
+            </pre>
+          </article>
+        </section>
+        <section class="main-section" id="Variables">
+          <header class="title-section">Variables</header>
+          <article class="info">
+            <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+            <p>
+              A JavaScript identifier must start with a letter, underscore (<code class="piece-code">_</code>), or dollar sign (<code class="piece-code">$</code>). Subsequent
+              characters can also be digits (<code class="piece-code">0</code>–<code class="piece-code">9</code>).
+            </p>
+            <p>
+              Because JavaScript is case sensitive, letters include the characters "<code class="piece-code">A</code>" through "<code class="piece-code">Z</code>" (uppercase) as
+              well as "<code class="piece-code">a</code>" through "<code class="piece-code">z</code>" (lowercase).
+            </p>
+            <p>
+              You can use most of ISO 8859-1 or Unicode letters such as <code class="piece-code">å</code> and <code class="piece-code">ü</code> in identifiers. (For more details,
+              see this blog post.) You can also use the Unicode escape sequences as characters in identifiers.
+            </p>
+            <p>
+              Some examples of legal names are <code class="piece-code">Number_hits</code>, <code class="piece-code">temp99</code>, <code class="piece-code">$credit</code>, and
+              <code class="piece-code">_name</code>.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="Data_Types">
+          <header class="title-section">Data Types</header>
+          <article class="info">
+            <p>The latest ECMAScript standard defines eight data types:</p>
+            <ul>
+              <li>Seven data types that are primitives:</li>
+              <ol>
+                <li>Boolean. true and false.</li>
+                <li>null. A special keyword denoting a null value. (Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.)</li>
+                <li>undefined. A top-level property whose value is not defined.</li>
+                <li>Number. An integer or floating point number. For example: 42 or 3.14159.</li>
+                <li>BigInt. An integer with arbitrary precision. For example: 9007199254740992n.</li>
+                <li>String. A sequence of characters that represent a text value. For example: "Howdy"</li>
+                <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
+              </ol>
+              <li>and Object</li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Functions">
+          <header class="title-section">Functions</header>
+          <article class="info">
+            <p>
+              Functions are one of the fundamental building blocks in JavaScript. A function is a JavaScript procedure—a set of statements that performs a task or calculates a
+              value. To use a function, you must define it somewhere in the scope from which you wish to call it.
+            </p>
+            <h3>Syntax</h3>
+            <p>
+              A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+            </p>
+            <ul>
+              <li>The name of the function.</li>
+              <li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
+              <li>The JavaScript statements that define the function, enclosed in curly brackets, {...}.</li>
+            </ul>
+            <p>Example:</p>
+
+            <pre class="code-js code-2">
+    <code class="js js-2"> 
+        <span class="keyword">function</span> <span class="name">name</span><span class="any-operator">(</span>parameter1, parameter2, parameter3<span class="any-operator">)</span> <span class="any-operator">{</span>  
+            <span class="comment">// code to be executed</span>  
+        <span class="any-operator">}</span>
+    <span class="line-numbers-rows">
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+    </code>
+            </pre>
+            <h3>Invocation</h3>
+            <p>The code inside the function will execute when "something" invokes (calls) the function:</p>
+            <ul>
+              <li>When an event occurs (when a user clicks a button)</li>
+              <li>When it is invoked (called) from JavaScript code</li>
+              <li>Automatically (self invoked)</li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Strings">
+          <header class="title-section">Strings</header>
+          <article class="info">
+            <p>
+              In any computer programming language, a string is a sequence of characters used to represent text. In JavaScript, a String is one of the primitive values and the
+              String object is a wrapper around a String primitive.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="Objects">
+          <header class="title-section">Objects</header>
+          <article class="info">
+            <p>
+              Object refers to a data structure containing data and instructions for working with the data. Objects sometimes refer to real-world things, for example a car or map
+              object in a racing game. It is used to store various keyed collections and more complex entities. Objects can be created using the Object() constructor or the object
+              initializer / literal syntax.
+            </p>
+            <p>Example:</p>
+            <pre class="code-js code-3">
+    <code class="js js-2"> 
+        <span class="keyword">var</span> <span class="name">car</span> <span class="any-operator">=</span> {
+            <span class="property">type:</span> "Fiat"
+            <span class="property">model:</span> "500"
+            <span class="property">color:</span> "white"
+        <span class="any-operator">}</span>
+    <span class="line-numbers-rows">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+    </code>
+            </pre>
+          </article>
+        </section>
+        <section class="main-section" id="Arrays">
+          <header class="title-section">Arrays</header>
+          <article class="info">
+            <p>
+              Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations. Neither the length of a JavaScript array nor the types of its
+              elements are fixed. Since an array's length can change at any time, and data can be stored at non-contiguous locations in the array, JavaScript arrays are not
+              guaranteed to be dense; this depends on how the programmer chooses to use them. In general, these are convenient characteristics; but if these features are not
+              desirable for your particular use, you might consider using typed arrays.
+            </p>
+            <p>Example:</p>
+            <pre class="code-js code-4">
+    <code class="js js-2"> 
+        <span class="keyword">var</span> <span class="name">array</span> <span class="any-operator">=</span> <span class="any-operator">[</span> item1, item2, ... <span class="any-operator">]</span>  
+    <span class="line-numbers-rows">
+        <span></span>
+    </span>
+    </code>
+            </pre>
+          </article>
+        </section>
+        <section class="main-section" id="Reference">
+          <header class="title-section">Reference</header>
+          <article class="info">
+            <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a></p>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
